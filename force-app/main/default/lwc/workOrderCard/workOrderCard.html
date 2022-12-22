@@ -1,0 +1,36 @@
+<template>
+    <lightning-card class="wide" title={title} icon-name="custom:custom63">
+            <div class="slds-grid slds-gutters slds-wrap slds-p-around_small">
+                <div class="slds-col slds-size_1-of-2">
+                    <dl class="slds-list_stacked">
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Work Order
+                            Number
+                        </dt>
+                        <dd class="slds-item_detail slds-truncate" title="Description for first label">
+                            {workOrder.WorkOrderNumber}</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Status</dt>
+                        <dd class="slds-item_detail slds-truncate" title="Second description">{workOrder.Status}</dd>
+                    </dl>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <dl class="slds-list_stacked">
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Asset
+                        </dt>
+                        <dd class="slds-item_detail slds-truncate" title="Description for first label">
+                            {asset}</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Location
+                        </dt>
+                        <dd class="slds-item_detail slds-truncate" title="Second description">{location}</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="slds-col slds-size_2-of-2 slds-align_absolute-center slds-p-vertical_medium">
+                <lightning-button-group>
+                    <lightning-button icon-name="utility:event" onclick={addToSchedule} label="Add to Schedule">
+                    </lightning-button>
+                    <lightning-button icon-name="utility:preview" onclick={viewInFSM} label="View in FSM">
+                    </lightning-button>
+                </lightning-button-group>
+            </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-text-heading_large">Work Center: {workCenter}</div>
+    <div class="slds-grid slds-grid_align-center slds-container_large">
+        <div class="slds-col slds-size_1-of-1">
+        <template if:true={workOrders}>
+            <template for:each={workOrders} for:item="workOrder">
+                <c-work-order-card key={workOrder.Id} work-order={workOrder} onaddtoschedule={addToSchedule} onviewinfsm={viewInFSM}></c-work-order-card>
+            </template>
+        </template>
+        <template if:true={error}>
+            <div style="color: red; font-weight: bold;">{error}</div>
+        </template>
+    </div>
+</div>
+</template>
